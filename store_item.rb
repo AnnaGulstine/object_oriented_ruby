@@ -11,6 +11,10 @@ class Mug
     @color = input_options[:color]
     @material = input_options[:material]
     @price = input_options[:price]
+
+    if @price == nil
+      @price = 15
+    end
   end
 
   def print_info
@@ -24,7 +28,7 @@ class Mug
 end
 
 # New way of creating instances of the Mug class: (can call options hash)
-mug1 = Mug.new({size: "small", color: "black", material: "ceramic", price: 10})
+mug1 = Mug.new({size: "small", color: "black", material: "ceramic"})
 mug2 = Mug.new(size: "large", color: "white", material: "stoneware", price: 20)
 mug3 = Mug.new size: "medium", material: "glass", price: 15, color: "brown"
 
